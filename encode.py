@@ -1,5 +1,5 @@
-from get_e import get_e
 from GlobalVariables import *
+from get_e import get_e
 
 
 def encode(text):

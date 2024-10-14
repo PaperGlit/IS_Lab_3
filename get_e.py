@@ -9,3 +9,5 @@ def get_e(p, phi):
         else:
             if math.gcd(e, phi) == 1:
                 return int(e)
+    else:
+        raise ValueError("No valid value was found for e.")
