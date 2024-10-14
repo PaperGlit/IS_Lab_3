@@ -16,9 +16,6 @@ def main():
                     continue
                 text = encode(input_text)
                 print(f"Encoded text - {text}")
-                save_input = input("Would you like to save the input? (y/n): ").upper()
-                if save_input in ["Y", "YES"]:
-                    save(text)
             case "2":
                 input_text = input("Enter the text to decode: ").upper()
                 if not is_valid_input(input_text):
@@ -26,8 +23,9 @@ def main():
                     continue
                 text = decode(input_text)
                 print(f"Decoded text: {text}")
-                save_input = input("Would you like to save the input? (y/n): ").upper()
-                if save_input in ["Y", "YES"]:
-                    save(text)
             case _:
                 break
+        save_input = input("Would you like to save the result? (y/n): ").upper()
+        if save_input in ["Y", "YES"]:
+            save(text)
+            print("Result saved successfully.")
